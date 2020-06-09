@@ -29,6 +29,11 @@ font pango:monospace 8
 # Lock Screen
 bindsym $mod+o exec i3lock -c 666666
 
+#launch bluetooth
+#install blueman using apt for this to function 
+bindsym $mod+b exec blueman-applet   
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -44,6 +49,8 @@ bindsym $mod+Shift+v exec code
 # kill focused window
 bindsym $mod+Shift+q kill
 
+#start network manager
+bindsym $mod+Shift+n exec nm-applet
 # start dmenu (a program launcher)
 #bindsym $mod+d exec rofi -show run -padding 355 -width 100
 # There also is the (new) i3-dmenu-desktop which only displays applications
