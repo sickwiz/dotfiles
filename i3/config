@@ -29,6 +29,14 @@ font pango:monospace 8
 # Lock Screen
 bindsym $mod+o exec i3lock -c 666666
 
+#this is to enable touchpad tapping, to configure this for your device,
+# run xinput list and find device id associated with touchpad then run
+# xinput list-props <device id> , find the property id next to 
+#"tapping enabled" 
+# 13 is device id, 347 is property id in my system
+exec xinput set-prop 13 347 1  
+
+
 #launch bluetooth
 #install blueman using apt for this to function 
 bindsym $mod+b exec blueman-applet   
