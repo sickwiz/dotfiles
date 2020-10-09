@@ -27,9 +27,9 @@ font pango:monospace 8
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Lock Screen
-bindsym $mod+o exec i3lock -c 666666
+bindsym $mod+o exec i3lock -c a4c7f4
 
-#this is to enable touchpad tapping, to configure this for your device,
+#this is to enable touchpad tab, to configure this for your device,
 # run xinput list and find device id associated with touchpad then run
 # xinput list-props <device id> , find the property id next to 
 #"tapping enabled" 
@@ -50,9 +50,6 @@ bindsym $mod+Return exec xfce4-terminal
 
 #start firefox
 bindsym $mod+Shift+f exec firefox
-
-#start vscode
-bindsym $mod+Shift+v exec code
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -145,13 +142,13 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 
 # Pulse Audio Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1%
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1%
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -193,8 +190,9 @@ bar {
   position top
   status_command i3status
 	  colors {
-  	background #5e0087
-	statusline #FFFF33
+  	background #333366
+	statusline #ABCD33
   }
 }
 
+exec wallee
